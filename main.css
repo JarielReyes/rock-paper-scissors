@@ -1,0 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    text-align: center;
+}
+.score-flex {
+    display: flex;
+    width: 40%;
+    margin: 2% 30% 0 30%;
+    justify-content: space-evenly;
+}
