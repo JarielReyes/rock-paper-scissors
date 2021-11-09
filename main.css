@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+
+.emoji-big {
+    text-align: center;
+    font-size: 8rem;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
