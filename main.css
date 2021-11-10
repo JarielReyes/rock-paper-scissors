@@ -4,19 +4,34 @@
     box-sizing: border-box;
 }
 
+.game-con {
+    width: 800px;
+    height: 800px;
+    border: 50px solid rgb(212, 16, 16);
+    border-radius: 50%;
+    box-shadow: 5px -3px 5px rgba(1, 1, 1, .2);
+    margin: 0 auto;
+    background-color: black;
+}
+
 header {
     text-align: center;
+    margin-top: 15%;
 }
 
 .score-flex {
     display: flex;
-    width: 40%;
-    margin: 2% 30% 0 30%;
+    width: 45%;
+    margin: 2% 30% 0 27.5%;
     justify-content: space-evenly;
 }
 
+span {
+    margin-left: 3px;
+}
+
 body {
-    background-color: black;
+    background-color: red;
     color: white;
 }
 
@@ -40,4 +55,47 @@ button:hover {
 .wrapper {
     display: flex;
     justify-content: center;
+}
+
+.box-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.box-tool {
+    display: column;
+    text-align: center;
+}
+
+.box1 {
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.vs-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    margin: 70px 40px;
+}
+
+.vs {
+    color: black;
+    font-weight: bolder;
+    font-size: 2rem;
+    text-align: center;
+    width: 50px;
+    height: 50PX;
+    margin-top: 7px;
+}
+
+.box2 {
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
 }
