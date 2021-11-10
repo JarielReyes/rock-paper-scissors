@@ -64,9 +64,13 @@ function checkWinner() {
     $(".playerChoice").removeClass("playerChoice");
 }
 
-
+function clear() {
+    $(".box1").empty()
+    $(".box2").empty()
+}
 
 $(".emoji-big").click(function(){
+    clear()
      $(this).addClass("playerChoice");
      if($("#rock").hasClass("playerChoice")) {
          playerMove = "rock"
