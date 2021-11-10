@@ -5,8 +5,8 @@
 }
 
 .game-con {
-    width: 800px;
-    height: 800px;
+    width: 50rem;
+    height: 50rem;
     border: 50px solid rgb(212, 16, 16);
     border-radius: 50%;
     box-shadow: 5px -3px 5px rgba(1, 1, 1, .2);
@@ -31,6 +31,7 @@ span {
 }
 
 body {
+    font-family: "Open Sans";
     background-color: red;
     color: white;
 }
@@ -103,7 +104,7 @@ button:hover {
     text-align: center;
     width: 50px;
     height: 50PX;
-    margin-top: 7px;
+    margin-top: 2px;
 }
 
 .box2 {
