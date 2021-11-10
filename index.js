@@ -5,70 +5,82 @@ compScore = 0
 
 function compChoice(){
     var choice = Math.floor(Math.random()*3) + 1;
-    console.log(choice)
+    console.log(choice);
     if (choice === 1) {
         compMove = "rock"
+        $(".box2").append("✊");
     }
     else if (choice === 2) {
         compMove = "paper"
+        $(".box2").append("✋");
     }
     else {
         compMove = "scissors"
+        $(".box2").append("✌️");
     }
-    console.log(`Computer move is ${compMove}`)
+    console.log(`Computer move is ${compMove}`);
 }
 
 function checkWinner() {
     if (playerMove === "rock" && compMove === "rock"){
-
+        $(".win-or-lose").text("Tie"); 
     }
     else if (playerMove === "rock" && compMove === "scissors") {
         playerScore += 1
-        $("#p-score").text(`${playerScore}`)
+        $("#p-score").text(`${playerScore}`);
+        $(".win-or-lose").text("Player Wins!");
     }
     else if (playerMove === "rock" && compMove === "paper"){
         compScore += 1
-        $("#c-score").text(`${compScore}`)
+        $("#c-score").text(`${compScore}`);
+        $(".win-or-lose").text("Hal-9000 Wins!");
     }
     else if (playerMove === "paper" && compMove === "rock"){
         playerScore += 1
-        $("#p-score").text(`${playerScore}`)
+        $("#p-score").text(`${playerScore}`);
+        $(".win-or-lose").text("Player Wins!");
     }
     else if (playerMove === "paper" && compMove === "paper"){
-        
+        $(".win-or-lose").text("Tie");
     }
     else if (playerMove === "paper" && compMove === "scissors"){
         compScore += 1
-        $("#c-score").text(`${compScore}`)
+        $("#c-score").text(`${compScore}`);
+        $(".win-or-lose").text("Hal-9000 Wins!");
     }
     else if (playerMove === "scissors" && compMove === "rock"){
         compScore += 1
-        $("#c-score").text(`${compScore}`)
+        $("#c-score").text(`${compScore}`);
+        $(".win-or-lose").text("Hal-9000 Wins!");
     }
     else if (playerMove === "scissors" && compMove === "paper"){
         playerScore += 1
-        $("#p-score").text(`${playerScore}`)
+        $("#p-score").text(`${playerScore}`);
+        $(".win-or-lose").text("Player Wins!");
     }
     else if (playerMove === "scissors" && compMove === "scissors"){
-        
+        $(".win-or-lose").text("Tie");
     }
-    $(".playerChoice").removeClass("playerChoice")
+    $(".playerChoice").removeClass("playerChoice");
 }
 
 
 
 $(".emoji-big").click(function(){
-     $(this).addClass("playerChoice")
+     $(this).addClass("playerChoice");
      if($("#rock").hasClass("playerChoice")) {
          playerMove = "rock"
+         $(".box1").append("✊");
      }
      else if($("#paper").hasClass("playerChoice")) {
         playerMove = "paper"
+        $(".box1").append("✋");
     }
      else {
         playerMove = "scissors"
+        $(".box1").append("✌️");
     }
      console.log(`Player move is ${playerMove}`)
-     compChoice()
-     checkWinner()
+     compChoice();
+     checkWinner();
 })
